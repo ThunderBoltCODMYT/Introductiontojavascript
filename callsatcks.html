@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="i1"></p>
+    <script>
+        function add(a, b, c) {
+            return a + b + c;
+        }
+
+        function avg(x, y, z) {
+            var x = add(x, y, z);
+            return x / 300;
+        }
+
+        function percent(n1, n2, n3) {
+            var x = avg(n1, n2, n3);
+            return x * 100;
+        }
+        document.getElementById('i1').innerHTML = percent(70, 89, 97);
+    </script>
+</body>
+
+</html>

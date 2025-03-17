@@ -1,0 +1,26 @@
+<html>
+
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <script>
+        function f1(a, b, c) {
+            var ans = a + b + c;
+            return ans;
+        };
+        var x = f1(4, 7, 2);
+        document.getElementById('p1').innerHTML = x;
+
+        function f2() {
+            var i, sum = 0;
+            for (var i = 0; i < arguments.length; i++) {
+                sum = sum + arguments[i];
+            }
+            return sum;
+        }
+        var y = f2(4, 7, 2, 5, 1);
+        document.getElementById('p2').innerHTML = y;
+    </script>
+</body>
+
+</html>

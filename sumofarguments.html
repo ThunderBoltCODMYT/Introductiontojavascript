@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="p1">
+        <!-- 120 -->
+    </p>
+    <p id="p2">
+        <!-- 10 -->
+    </p>
+    <p id="p3">
+        <!-- 44 -->
+    </p>
+    <p id="p4">
+        <!-- 85 -->
+    </p>
+    <p></p>
+    <script>
+        function f1() {
+            var sum = 1; // Initialize sum to 1 for multiplication
+            for (var x = 0; x < arguments.length; x++) {
+                sum = sum * arguments[x];
+            }
+            return sum;
+        }
+        var x = f1(1, 2, 3, 4, 5)
+        document.getElementById('p1').innerHTML = x;
+
+        function f2() {
+            var sum = arguments[0]; // Initialize sum to the first argument for division
+            for (var y = 1; y < arguments.length; y++) {
+                sum = sum / arguments[y];
+            }
+            return sum;
+        }
+        var y = f2(100, 2, 5)
+        document.getElementById('p2').innerHTML = y;
+
+        function f3() {
+            var z, sum = 0
+            for (var z = 0; z < arguments.length; z++) {
+                sum = sum + arguments[z];
+            }
+            return sum;
+        }
+        var z = f3(4, 6, 2, 3, 1, 8, 4, 9, 7, 0)
+        document.getElementById('p3').innerHTML = z;
+
+        function f4() {
+            var sum = arguments[0]; // Initialize sum to the first argument for subtraction
+            for (var d = 1; d < arguments.length; d++) {
+                sum = sum - arguments[d];
+            }
+            return sum;
+        }
+        var d = f4(100, 1, 2, 3, 4, 5)
+        document.getElementById('p4').innerHTML = d;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="i1"></p>
+    <p id="i2"></p>
+    <p id="i3"></p>
+    <script>
+        var friends = ['john', 'Melvin', 'mark', 'adam', 'steve'];
+        var i;
+        for (i = 0; i <= 4; i += 1) {
+            document.write(friends[i] + "<br>");
+        }
+        var x = friends.join('---');
+        document.getElementById('i1').innerHTML = x;
+
+        var y = friends.pop();
+        document.getElementById('i2').innerHTML = y;
+        document.getElementById('i3').innerHTML = friends;
+    </script>
+</body>
+
+</html>
