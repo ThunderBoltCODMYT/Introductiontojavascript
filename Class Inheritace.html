@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="i1"></p>
+    <p id="i2"></p>
+    <p id="i3"></p>
+    <script>
+        class student {
+            constructor(n, y) {
+                this.year = y;
+                this.name = n;
+            }
+            age() {
+                let d = new Date();
+                return d.getFullYear() - this.year;
+            }
+            show() {
+                return " My Name is " + this.name + " And my age is " + this.age() + " years "
+            }
+        }
+        s1 = new student('Priyank', 2013);
+        document.getElementById('i1').innerHTML = s1.show();
+        class result extends student {
+            constructor(n, y, p) {
+                super(n, y);
+                this.percent = p;
+            }
+            disp() {
+                return this.show() + " , I Secured " + this.percent + " % ";
+            }
+            static hi() {
+                return "Hi!";
+            }
+        }
+        s2 = new result('Durga', 2012, 86)
+        document.getElementById('i2').innerHTML = result.hi() + s2.disp();
+    </script>
+</body>
+
+</html>
