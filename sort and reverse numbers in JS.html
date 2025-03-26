@@ -1,0 +1,44 @@
+<html>
+
+<body>
+    <p id="i1"></p>
+    <p id="i2"></p>
+    <button width="60px" onclick="f1()">click me!</button><br>
+    <button width="60px" onclick="f2()">click me!</button><br>
+    <button width="60px" onclick="f3()">click me!</button><br>
+    <button width="60px" onclick="f4()">click me!</button><br>
+    <script>
+        var n = [6, 1, 9, 2, 0, 5];
+
+        function f1() {
+            document.getElementById("i1").innerHTML = " before sorting: " + n;
+            n.sort(function(a, b) {
+                return a - b
+            });
+            document.getElementById("i2").innerHTML = " after sorting: " + n;
+        }
+
+        function f2() {
+            document.getElementById("i1").innerHTML = " before sorting: " + n;
+            n.sort(function(a, b) {
+                return b - a
+            });
+            document.getElementById("i2").innerHTML = " after sorting: " + n;
+        }
+        var s = ['Pranav', 'Durga', 'Priyank', 'Jigisha'];
+
+        function f3() {
+            document.getElementById("i1").innerHTML = " before sorting: " + s;
+            s.sort();
+            document.getElementById("i2").innerHTML = " after sorting: " + s;
+        }
+
+        function f4() {
+            document.getElementById("i1").innerHTML = " before sorting: " + s;
+            s.sort().reverse();
+            document.getElementById("i2").innerHTML = " after sorting: " + s;
+        }
+    </script>
+</body>
+
+</html>
