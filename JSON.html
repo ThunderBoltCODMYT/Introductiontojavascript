@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="i1"></p>
+    <p id="i2"></p>
+    <p id="i3"></p>
+    <script>
+        var stu = {
+            name: 'Durga',
+            age: '13',
+            grade: '9'
+        };
+        document.getElementById("i1").innerHTML = stu.name;
+
+        var s = JSON.stringify(stu);
+        document.getElementById("i2").innerHTML = s;
+
+        var obj = JSON.parse(s);
+        document.getElementById("i3").innerHTML = obj.name;
+    </script>
+</body>
+
+</html>
