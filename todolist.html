@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal To-Do List</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        body.dark {
+            background-color: #1e1e2f;
+            color: #f4f4f9;
+        }
+        
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        #darkModeToggle {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .add-task,
+        .search-bar {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        input,
+        select,
+        button {
+            margin-right: 10px;
+        }
+        
+        #taskList {
+            list-style: none;
+        }
+        
+        .task-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
+        
+        .task-item .priority-high {
+            color: #e63946;
+        }
+        
+        .task-item .priority-medium {
+            color: #f4a261;
+        }
+        
+        .task-item .priority-low {
+            color: #2a9d8f;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>My To-Do List</h1>
+            <button id="darkModeToggle">🌙</button>
+        </header>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search tasks...">
+        </div>
+        <div class="add-task">
+            <input type="text" id="taskInput" placeholder="Add new task...">
+            <select id="priority">
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+            <button id="addTaskButton">Add</button>
+        </div>
+        <ul id="taskList" class="task-list"></ul>
+    </div>
+    <script src="todolist.js"></script>
+</body>
+
+</html>
