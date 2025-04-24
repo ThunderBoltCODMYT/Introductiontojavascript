@@ -1,0 +1,65 @@
+.pi1,
+.pi2,
+.pi3 {
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.pi1 {
+    background-image: url('artiom-vallat-1uBCLmu5BqA-unsplash.jpg');
+    min-height: 100%;
+}
+
+.pi2 {
+    background-image: url('joshua-kettle-mHm1ASYNC0I-unsplash.jpg');
+    min-height: 400px;
+}
+
+.pi3 {
+    background-image: url('images (1).jpg');
+    min-height: 400px;
+}
+
+section {
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.c1 {
+    background-color: blanchedalmond;
+    color: blue;
+}
+
+.c2 {
+    background-color: chartreuse;
+    color: orange;
+}
+
+.pt {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: chartreuse;
+    font-size: medium;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.pt.bt {
+    background-color: darkkhaki;
+    color: darkmagenta;
+    padding: 20px;
+}
+
+@media(max-width:560px) {
+    .pi1,
+    .pi2,
+    .pi3 {
+        background-attachment: scroll;
+    }
+}
